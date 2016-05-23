@@ -38,7 +38,6 @@ public class MesseApplication {
         String ret = "chris: " + chrisContrib;
         ret += "jasmin: " + jasminsContrib;
 
-        System.out.println("Done");
-        return new Result(jasminsContrib, chrisContrib);
+        return new Result(chrisContrib, jasminsContrib);
     }
 }

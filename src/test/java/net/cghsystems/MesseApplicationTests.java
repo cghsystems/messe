@@ -37,7 +37,7 @@ public class MesseApplicationTests {
         MockHttpServletRequestBuilder get = MockMvcRequestBuilders.get(getRequest)
                 .accept(MediaType.APPLICATION_JSON);
 
-        String expected = "{\"chrisContrib\":1097.9363,\"jasminContrib\":2491.0637}";
+        String expected = "{\"chrisContrib\":2491.0637,\"jasminContrib\":1097.9363}";
         mvc.perform(get)
                 .andExpect(status().isOk())
                 .andExpect(content().string(equalTo(expected)));

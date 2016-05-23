@@ -2,6 +2,7 @@ package net.cghsystems;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +17,7 @@ public class MesseApplication {
         SpringApplication.run(MesseApplication.class, args);
     }
 
+    @CrossOrigin(origins = { "http://localhost:9000", "http://schnittstelle.cfapps.pez.pivotal.io" })
     @RequestMapping("jasmin/{jasmin}/chris/{chris}/value/{value}")
     public Result calculateFairness(@PathVariable("jasmin") float jasminEarnings,
                                     @PathVariable("chris") float chrisEarnings,
